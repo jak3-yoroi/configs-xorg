@@ -1,0 +1,38 @@
+!Color and % when lost focus
+URxvt*fadeColor   : #2B2B2B
+URxvt*fading      : 15
+
+!Visual bit depth
+URxvt*depth       : 32 ! DO NOT WORK with ranger w3mimgdisplay
+!Darken (0..99) lighten (101..200) 100 no shading
+URxvt*shading     : 8
+URxvt*transparent : true
+URxvt*colorUL     : #DC9656
+
+! black (dark,light)
+URxvt*color0  : #000000
+URxvt*color8  : #585858
+! red
+URxvt*color1  : #AB4642
+URxvt*color9  : #AB4642
+! green
+URxvt*color2  : #A1B56C
+URxvt*color10 : #A1B56C
+! yellow
+URxvt*color3  : #F7CA88
+URxvt*color11 : #F7CA88
+! blue
+URxvt*color4  : #7CAFC2
+URxvt*color12 : #7CAFC2
+! magenta
+URxvt*color5  : #BA8BAF
+URxvt*color13 : #BA8BAF
+! cyan
+URxvt*color6  : #86C1B9
+URxvt*color14 : #86C1B9
+! white
+URxvt*color7  : #D8D8D8
+URxvt*color15 : #F8F8F8
+
+URxvt*background: #000000
+URxvt*foreground: #DEDEDE
