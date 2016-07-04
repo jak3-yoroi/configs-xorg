@@ -6,6 +6,7 @@
 !            Xresources).                                                      │
 ! - Authors:                                                                   │
 !   - Alessandro Molari <molari.alessandro@gmail.com> (alem0lars)              │
+!   - Giacomo Mantani <giacomo.mantani@gmail.com> (jake)                       │
 !                                                                              │
 ! Project informations:                                                        │
 !   - Homepage:        https://github.com/alem0lars/configs-xorg               │
@@ -74,7 +75,7 @@ Xft.rgba:      rgb
 # ├────────────────────────────────────────────────────────────────────────────┤
 # ├→ Cross-terminal settings ──────────────────────────────────────────────────┤
 
-*saveLines:    65536
+*saveLines:    1024
 *cursorBlink:  false
 *bellIsUrgent: true
 
@@ -103,13 +104,17 @@ urxvt*termName:       rxvt-256color
 urxvt*iso14755_52:    false
 urxvt.matcher.button: 1
 urxvt.cutchars:       ()*,<>[]{}|`""''
+urxvt*iso14755:       false
+urxvt*modifier:       alt
+urxvt.urgentOnBell:   True ! usefull with urgentHook xmonad
 
 ! URLs style.
 urxvt.underlineURLs: true
 
 ! Pseudo-transparency.
-urxvt*shading:     50
-urxvt*transparent: false
+urxvt*shading:     8
+urxvt*transparent: true
+urxvt*colorUL:     #86a2b0
 
 ! Font.
 urxvt*font:           <%= local! :xft_font %>
@@ -118,10 +123,11 @@ urxvt*italicFont:     <%= local! :xft_font %>
 urxvt*boldItalicFont: <%= local! :xft_font %>
 
 ! Scrollbar.
-urxvt.scrollBar: false
+urxvt.scrollBar:    false
+urxvt*scrollstyle:  plain
 
 ! Load extensions.
-urxvt.perl-ext-common: default,clipboard,matcher,keyboard-select,url-select
+urxvt.perl-ext-common: default,clipboard,matcher,keyboard-select,url-select,font-size
 
 ! Keys mapping.
 urxvt.keysym.Home:        \033[H
@@ -155,8 +161,8 @@ urxvt.keysym.C-Left:      \033[1;5D
 urxvt.keysym.M-c:         perl:clipboard:copy
 urxvt.keysym.M-v:         perl:clipboard:paste
 urxvt.keysym.M-C-v:       perl:clipboard:paste_escaped
-urxvt.clipboard.copycmd:  xclip -i -selection clipboard
-urxvt.clipboard.pastecmd: xclip -o -selection clipboard
+urxvt.clipboard.copycmd:  xsel -bi
+urxvt.clipboard.pastecmd: xsel -ob
 
 ! Extension `keyboard-select`.
 urxvt.keysym.M-Escape: perl:keyboard-select:activate
