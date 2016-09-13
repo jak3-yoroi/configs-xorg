@@ -152,15 +152,15 @@ urxvt.keysym.C-Right:     \033[1;5C
 urxvt.keysym.C-Left:      \033[1;5D
 
 ! Clipboard.
-urxvt.keysym.M-c:         perl:clipboard:copy
-urxvt.keysym.M-v:         perl:clipboard:paste
-urxvt.keysym.M-C-v:       perl:clipboard:paste_escaped
-urxvt.clipboard.copycmd:  xsel -bi
-urxvt.clipboard.pastecmd: xsel -ob
+urxvt.keysym.M-c:           perl:clipboard:copy
+urxvt.keysym.M-v:           perl:clipboard:paste
+urxvt.keysym.M-C-v:         perl:clipboard:paste_escaped
+urxvt.clipboard.copycmd:    xsel -bi
+urxvt.clipboard.pastecmd:   xsel -ob
 
 ! Extension `keyboard-select`.
-urxvt.keysym.M-Escape: perl:keyboard-select:activate
-urxvt.keysym.M-s:      perl:keyboard-select:search
+urxvt.keysym.M-Escape:      perl:keyboard-select:activate
+urxvt.keysym.M-s:           perl:keyboard-select:search
 
 ! Extension `url-select`.
 urxvt.keysym.M-u:           perl:url-select:select_next
@@ -171,10 +171,11 @@ urxvt.url-select.button:    1
 urxvt.url-select.autocopy:  false
 
 ! Extension `font-size` (https://github.com/majutsushi/urxvt-font-size).
-urxvt.keysym.C-M-Up:   font-size:increase
-urxvt.keysym.C-M-Down: font-size:decrease
-urxvt.keysym.C-S-Up:   font-size:incglobal
-urxvt.keysym.C-S-Down: font-size:decglobal
+urxvt.keysym.M-Up:          perl:font-size:increase
+urxvt.keysym.M-Down:        perl:font-size:decrease
+urxvt.keysym.M-S-Up:        perl:font-size:incglobal
+urxvt.keysym.M-S-Down:      perl:font-size:decglobal
+urxvt.keysym.M-0:           perl:font-size:reset
 
 <% end -%>
 
